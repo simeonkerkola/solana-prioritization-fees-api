@@ -148,7 +148,7 @@ export const getRecentPrioritizationFeesByPercentile = async (
   // @solana/web3.js uses the private method `_rpcRequest` internally to make RPC requests which is not exposed by TypeScript
   // it is available in JavaScript, however, TypeScript enforces it as unavailable and complains, the following line is a workaround
 
-  /* @ts-ignore */
+  /* @ts-ignore-next-line */
   const rpcRequest = connection._rpcRequest;
 
   // to save fallback roundtrips if your RPC is not Triton, both RPCs are called in parallel to minimize latency
